@@ -3,7 +3,7 @@
 # Get the video conference URL from the calendar configured in gcalcli
 conference_url()
 {
- (/usr/local/bin/gcalcli agenda --details conference | grep -w "video:" | sed 's/^.*: //')
+ (/usr/local/bin/gcalcli agenda --details conference | grep -w "video:" | sed 's/^.*: //' | head -1)
 }
 
 # Check if the given URL is already open in Safari
