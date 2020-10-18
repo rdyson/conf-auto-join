@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>dev.rdyson.ConfAutoJoin</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/rdyson/Code/scripts/conf-auto-join.sh</string>
+  </array>
+
+  <key>Nice</key>
+  <integer>1</integer>
+
+  <key>StartInterval</key>
+  <integer>60</integer>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>StandardErrorPath</key>
+  <string>/tmp/ConfAutoJoin.err</string>
+
+  <key>StandardOutPath</key>
+  <string>/tmp/ConfAutoJoin.out</string>
+</dict>
+</plist>
