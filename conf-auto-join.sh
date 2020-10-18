@@ -10,12 +10,6 @@ conference_url()
 is_url_open() {
  open_url=$(safari-ctl)
  conference_url=$1
- echo ""
- echo "#####"
- echo "open_url is $open_url"
- echo "conference_url is $conference_url"
- echo "####"
- echo ""
 
  if [ "$open_url" = "$conference_url" ]; then
   return 1;
