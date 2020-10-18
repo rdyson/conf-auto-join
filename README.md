@@ -1,0 +1,1 @@
+# conf-auto-join
