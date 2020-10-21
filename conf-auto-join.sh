@@ -3,7 +3,10 @@
 # Get the video conference URL from the calendar configured in gcalcli
 conference_url()
 {
- (/usr/local/bin/gcalcli agenda --nostarted --nodeclined --details conference $1 $2 | grep -w "video:" | sed 's/^.*: //' | head -1)
+ range_start=$1
+ range_end=$2
+
+ (/usr/local/bin/gcalcli agenda --nostarted --nodeclined --details conference ${range_start} ${range_end} | grep -w "video:" | sed 's/^.*: //' | head -1)
 }
 
 # Check if the given URL is already open in Safari
@@ -28,8 +31,8 @@ is_conf_app_running() {
 }
 
 # Store values for time range to search
-range_start=$(date +"%H%M")
-range_end=$(date -v +5M +"%H%M")
+range_start=$(date +"%Y-%m-%dT%H:%M")
+range_end=$(date -v +5M +"%Y-%m-%dT%H:%M")
 
 # Store values for the video conference URL and whether that URL is already open
 conference_url_value=$(conference_url "$range_start $range_end")
